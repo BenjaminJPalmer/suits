@@ -1,6 +1,9 @@
 # suits
 Suits Card Game
 
+CURRENT BUILD
+Displays four cards, but then ends. You have to reset the page and start afresh.
+
 A simple and easy card game, normally played as drinking game.
 
 How to Play
