@@ -26,7 +26,7 @@ Beth goes second, chooses hearts, and clicks draw.
 The cards drawn are 2 of clubs, jack of diamonds, king of diamonds and 10 of spades.
 As there are no hearts, Beth must drink 8 times (2 * 4 - the magic number times 2).
 
-Aditional Rules
+Additional Rules
 
 You cannot give a player more than 10 drinks per round.
 On the final round, all numbers are doubled (Ben would have had 24 drinks to give out for example) and the above rule is canceled.
