@@ -1,6 +1,6 @@
 .deck
 {
-	width: 50%;
+	width: 500px;
 	margin: 20px auto;
 	background :black;
 	border: solid 10px black;
@@ -26,6 +26,7 @@
 .btn
 {
 	background:white;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	padding: 10px 20px;
 	border-radius: 30px;
     margin: 10px;
