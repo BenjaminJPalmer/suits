@@ -1,6 +1,18 @@
+* {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .deck
 {
 	width: 500px;
+	min-height: 88vh;
 	margin: 20px auto;
 	background :black;
 	border: solid 10px black;
@@ -8,6 +20,10 @@
 	border-radius:10px;
 	text-align: center;
 	color: white;
+}
+
+#deck {
+	flex: 2 2 auto;
 }
 
 .card
@@ -26,7 +42,6 @@
 .btn
 {
 	background:white;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	padding: 10px 20px;
 	border-radius: 30px;
     margin: 10px;
@@ -35,7 +50,7 @@
 
 .card .value{
 	font-size: 20pt;
-	font-family: sans-serif;
+	/* font-family: sans-serif; */
 }
 
 .card .suit

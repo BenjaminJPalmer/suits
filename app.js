@@ -1,6 +1,7 @@
 var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
 var deck = new Array();
+const fullDeckDisplay = true;
 
 function getDeck() {
 	var deck = new Array();
@@ -25,10 +26,13 @@ function shuffle() {
 		deck[location1] = deck[location2];
 		deck[location2] = temp;
 	}
-	renderDeck();
 }
 
 function renderDeck() {
+	if (!fullDeckDisplay) {
+		document.getElementById('deck').innerHTML = '';	
+	}
+
 	for (let i = 0; i < 4; i++) {
 		let card = document.createElement("div");
 		let value = document.createElement("div");
@@ -42,8 +46,11 @@ function renderDeck() {
 		card.appendChild(suit);
 
 		document.getElementById("deck").appendChild(card);
+		window.scrollTo(0, document.body.scrollHeight);
+	}
+	
+	for (let j = 0; j < 4; j++) {
 		deck.shift()
-		console.log(deck)
 	}
 }
 
