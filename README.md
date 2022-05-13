@@ -29,4 +29,7 @@ You cannot give a player more than 10 drinks per round.
 On the final round, all numbers are doubled (`Ben` would have had 24 drinks to give out for example) and the above rule is canceled.
 
 ## TODOS
-Displays four cards, but then ends. You have to reset the page and start afresh.
+* Add checkbox for `fullDeckDisplay`
+* Add text for rule explanation
+* Add inputs and calculations for number of players
+* Add extra rules for `Safe Round` & `Final Round` 

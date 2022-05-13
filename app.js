@@ -1,7 +1,12 @@
 var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
 var deck = new Array();
-const fullDeckDisplay = true;
+
+const fullDeckDisplay = false;
+// if (document.getElementById('fulldeck').checked) {
+// 	fullDeckDisplay = true;
+// }
+
 
 function getDeck() {
 	var deck = new Array();
@@ -29,28 +34,34 @@ function shuffle() {
 }
 
 function renderDeck() {
-	if (!fullDeckDisplay) {
-		document.getElementById('deck').innerHTML = '';	
-	}
-
-	for (let i = 0; i < 4; i++) {
-		let card = document.createElement("div");
-		let value = document.createElement("div");
-		let suit = document.createElement("div");
-		card.className = "card";
-		value.className = "value";
-		suit.className = "suit " + deck[i].Suit;
-
-		value.innerHTML = deck[i].Value;
-		card.appendChild(value);
-		card.appendChild(suit);
-
-		document.getElementById("deck").appendChild(card);
+	if (deck.length == 0) {
+		document.getElementById('end').innerHTML = "<h2>Out of cards!</h2>";
 		window.scrollTo(0, document.body.scrollHeight);
-	}
 	
-	for (let j = 0; j < 4; j++) {
-		deck.shift()
+	} else {	
+		if (!fullDeckDisplay) {
+			document.getElementById('deck').innerHTML = '';	
+		}
+
+		for (let i = 0; i < 4; i++) {
+			let card = document.createElement("div");
+			let value = document.createElement("div");
+			let suit = document.createElement("div");
+			card.className = "card";
+			value.className = "value";
+			suit.className = "suit " + deck[i].Suit;
+
+			value.innerHTML = deck[i].Value;
+			card.appendChild(value);
+			card.appendChild(suit);
+
+			document.getElementById("deck").appendChild(card);
+			window.scrollTo(0, document.body.scrollHeight);
+		}
+
+		for (let j = 0; j < 4; j++) {
+			deck.shift()
+		}
 	}
 }
 
