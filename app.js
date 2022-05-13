@@ -2,10 +2,7 @@ var cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var suits = ["diamonds", "hearts", "spades", "clubs"];
 var deck = new Array();
 
-const fullDeckDisplay = false;
-// if (document.getElementById('fulldeck').checked) {
-// 	fullDeckDisplay = true;
-// }
+let fullDeckDisplay = false;
 
 
 function getDeck() {
@@ -38,7 +35,13 @@ function renderDeck() {
 		document.getElementById('end').innerHTML = "<h2>Out of cards!</h2>";
 		window.scrollTo(0, document.body.scrollHeight);
 	
-	} else {	
+	} else {
+		if (document.getElementById('fulldeck').checked) {
+			fullDeckDisplay = true;
+		} else if (!document.getElementById('fulldeck').checked) {
+			fullDeckDisplay = false;
+		}
+
 		if (!fullDeckDisplay) {
 			document.getElementById('deck').innerHTML = '';	
 		}
