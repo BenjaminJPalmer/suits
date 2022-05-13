@@ -29,11 +29,10 @@ function shuffle() {
 }
 
 function renderDeck() {
-	document.getElementById('deck').innerHTML = '';
-	for (var i = 0; i < 4; i++) {
-		var card = document.createElement("div");
-		var value = document.createElement("div");
-		var suit = document.createElement("div");
+	for (let i = 0; i < 4; i++) {
+		let card = document.createElement("div");
+		let value = document.createElement("div");
+		let suit = document.createElement("div");
 		card.className = "card";
 		value.className = "value";
 		suit.className = "suit " + deck[i].Suit;
@@ -43,6 +42,8 @@ function renderDeck() {
 		card.appendChild(suit);
 
 		document.getElementById("deck").appendChild(card);
+		deck.shift()
+		console.log(deck)
 	}
 }
 
