@@ -43,7 +43,7 @@ function renderDeck() {
 		}
 
 		if (!fullDeckDisplay) {
-			document.getElementById('deck').innerHTML = '';	
+			document.getElementById('deck').innerHTML = '';
 		}
 
 		for (let i = 0; i < 4; i++) {
@@ -67,6 +67,20 @@ function renderDeck() {
 		}
 	}
 }
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', event => {
+	event.preventDefault()
+	const players = document.getElementById('players').value;
+	console.log(players)
+	document.querySelector('.magic-number').innerHTML = `The magic number is: ${players - 1}`;
+})
+
+const drinks = document.getElementsByClassName('result')
+
+
+
 
 function load() {
 	deck = getDeck();

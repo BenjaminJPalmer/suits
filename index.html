@@ -3,18 +3,41 @@
     <head>
         <link rel="stylesheet" href="./style.css" />
         <title>Suits</title>
-        <link rel="shortcut icon" href="card.png" type="image/png">
+        <link rel="shortcut icon" href="card.png" type="image/png" />
     </head>
 
     <body>
-        <div class="info"><form action=""><input type="checkbox" name="fulldeck" id="fulldeck"></form></form></div>
-        <div class="deck flex">
-            <h1>Suits</h1>
-            <div id="deck"></div>
-            <div id="end"></div>
-            <div class="btn-container"><a href="javascript:void(0)" class="btn" onclick="renderDeck()">Draw</a></div>
-        </div>
-        <div class="calculations"></div>
+        <main>
+            <div>
+                <div>
+                    <p>Enable full deck display?</p>
+                    <label for="fulldeck" class="switch">
+                        <input type="checkbox" name="fulldeck" id="fulldeck" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <form action="" method="POST">
+                        <label for="players" class="players"
+                            >How many players are there?
+                            <input type="text" name="players" id="players" value="" />
+                        </label>
+                        <input type="submit" name="button" value="Go">
+                    </form>
+                    <p class="magic-number" value="">The magic number is:</p>
+                    <p class="result">Number of drinks: </p>
+                </div>
+            </div>
+            <div class="deck flex">
+                <h1>Suits</h1>
+                <div id="deck"></div>
+                <div id="end"></div>
+                <div class="btn-container">
+                    <a href="javascript:void(0)" class="btn" onclick="renderDeck()">Draw</a>
+                </div>
+            </div>
+        </main>
 
         <script src="./app.js"></script>
     </body>
