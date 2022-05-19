@@ -13,6 +13,10 @@ main {
     justify-content: space-between;
 }
 
+.sidebar {
+    position: fixed;
+}
+
 .deck {
     width: 500px;
     min-height: 88vh;
