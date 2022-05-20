@@ -64,7 +64,7 @@ function renderDeck() {
 	if (deck.length == 4) {
 		const lastRound = document.createElement("h2");
 		lastRound.id = "lastRound";
-		lastRound.innerHTML = "Last round... ";
+		lastRound.innerHTML = "Last round, remember to double...";
 		document.getElementById("deck").appendChild(lastRound);
 		window.scrollTo(0, document.body.scrollHeight);
 	}
